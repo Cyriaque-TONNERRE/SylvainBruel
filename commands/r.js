@@ -51,8 +51,15 @@ export async function execute(interaction) {
     for (let nb of dice_tab) {
         somme += nb;
     }
+    if (dice_tab.length > 1) {
+        dice_tab = dice_tab.sort((a, b) => b - a);
+    }
 
-    const text = `Requête de ${interaction.member.displayName}: \`[${arg.toString()}]\` Roll: \`[${dice_tab}]\` Résultat: \`${somme}\``
+    let text = `Requête de ${interaction.member.displayName}: \`[${arg.toString()}]\` Roll: \`[${dice_tab}]\` Résultat: \`${somme}\``
+
+    if (text.length > 1800) {
+        text = `Requête de ${interaction.member.displayName}: \`[${arg.toString()}]\` Roll: \`[Message trop long]\` Résultat: \`${somme}\``
+    }
 
     await interaction.reply({
         content: text
