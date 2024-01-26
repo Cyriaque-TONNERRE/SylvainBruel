@@ -1,0 +1,20 @@
+{
+  "name": "sylvainbruel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cyriaque-TONNERRE/SylvainBruel.git"
+  },
+  "private": true,
+  "dependencies": {
+    "discord-api-types": "^0.37.67",
+    "discord.js": "^14.14.1",
+    "random": "^4.1.0"
+  }
+}
