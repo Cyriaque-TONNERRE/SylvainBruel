@@ -1,10 +1,10 @@
 import { SlashCommandBuilder } from 'discord.js';
 import random from 'random';
-import { roll_dice} from "../fonction/roll_dice.js";
+import {roll_dice} from "../fonction/roll_dice.js";
 
 export const data = new SlashCommandBuilder()
-    .setName('r')
-    .setDescription('Permet de lancer des dés.')
+    .setName('randomroll')
+    .setDescription('Permet de lancer des dés et d\' avoir les résultats non triés.')
     .addStringOption(option =>
         option.setName('arguments')
             .setDescription(`Les arguments pour le lancé de dés, si besoin d'aide, /help`)
@@ -12,5 +12,5 @@ export const data = new SlashCommandBuilder()
             .setRequired(true));
 
 export async function execute(interaction) {
-    roll_dice(interaction, false);
+    roll_dice(interaction, true);
 }

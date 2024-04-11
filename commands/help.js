@@ -8,8 +8,8 @@ export async function execute(interaction) {
     const embed_explication = new EmbedBuilder()
         .setColor('#cc532e')
         .setTitle('Voici comment ça fonctionne !')
-        .setDescription(`Il suffit de taper /r ou /roll et ensuite d'ajouter tes arguments (expliqué juste en dessous)\n`)
-        .setImage('http://cyriaque.tonnerre.free.fr/explication.png');
+        .setDescription(`Il suffit de taper /r, /roll ou /rr, /randomroll et ensuite d'ajouter tes arguments (expliqué juste en dessous)\n`)
+        .setImage('http://cyriaque.tonnerre.free.fr/explication2.png');
 
     interaction.reply({
         embeds: [embed_explication],

@@ -11,7 +11,7 @@ const config = await fsPromises.readFile(configPath, 'utf-8').then(JSON.parse);
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const client = new Client({ intents: 265216, autoReconnect: true });
+const client = new Client({ intents: 33280});
 
 const emitter = new EventEmitter();
 emitter.setMaxListeners(15);
@@ -45,6 +45,8 @@ client.on(Events.InteractionCreate, async (interaction) => {
         });
     }
 });
+
+
 
 client.login(config.token).then( () => {
     console.log('Le bot est lancé');
